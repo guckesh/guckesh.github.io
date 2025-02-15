@@ -1,0 +1,15 @@
+site_name: 'Mezaque Silva'
+docs_dir: 'docs'
+site_url: 'https://guckesh.github.io'
+nav:
+  - Home: index.md
+  - Projects:
+      - Project 1: projects/project1.md
+      - Project 2: projects/project2.md
+      - Project 3: projects/project3.md
+
+theme:
+  name: material
+
+repo_url: 'https://github.com/guckesh'
+repo_name: 'Mezaque Silva GitHub'
