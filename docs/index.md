@@ -1,1 +1,1 @@
-# Welcome to Mezaque Silva's Projects
+# Welcome to the AOSP project for Galaxy S23 Series
