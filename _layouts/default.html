@@ -119,6 +119,34 @@
   <style>/* Estilos inline */</style>
 </head>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | absolute_url }}">Home</a></li>
+        <li><a href="{{ "/about/" | absolute_url }}">About</a></li>
+        <li><a href="{{ "/blog/" | absolute_url }}">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }} My Blog</p>
+  </footer>
+</body>
+</html>
 
 <!-- Search field -->
 <div id="search-container">
