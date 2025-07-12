@@ -3,7 +3,7 @@ layout: default
 title: "Home Page"
 ---
 
-![lineup](assets/images/voltageos.jpg)
+![lineup](assets/images/voltageos.jpg){:width="600px" height="auto"}
 
 ## Android Open Source Project (AOSP)
 
