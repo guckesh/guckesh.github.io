@@ -3,6 +3,8 @@ layout: default
 title: "Home Page"
 ---
 
+![lineup](assets/images/voltageos.jpg)
+
 ## Android Open Source Project (AOSP)
 
 The **Android Open Source Project (AOSP)** is the open-source base of the Android operating system, developed by **Google** and maintained by the developer community. AOSP contains the core of the operating system, libraries, APIs, and many essential tools that allow devices like smartphones, tablets, and other Android-based devices to function.
