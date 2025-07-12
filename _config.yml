@@ -1,0 +1,11 @@
+title: "Welcome"
+description: "Technology"
+author:
+  name: "Mezaque Da Silva Carmo"
+email: "your@email.com"
+baseurl: ""
+url: "https://guckesh.github.io"
+
+collections:
+  posts:
+    output: true
