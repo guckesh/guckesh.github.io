@@ -1,0 +1,11 @@
+title: "Welcome"
+description: "Technology&Anime"
+author:
+  name: "Mezaque Da Silva Carmo"
+email: "mezaquegit@email.com"
+youtube: "https://www.youtube.com/@Mezaqueanimes"
+url: "https://guckesh.github.io"
+
+collections:
+  posts:
+    output: true
