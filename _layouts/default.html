@@ -5,6 +5,11 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
     .config-menu {
       position: relative;
       display: inline-block;
@@ -34,19 +39,8 @@
       margin: 5px 0;
     }
 
-    #config-options button {
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
     #config-options.show {
       display: block;
-    }
-
-    body.dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
     }
 
     /* Modal (dialog box) styles */
@@ -64,10 +58,11 @@
     }
 
     .modal-content {
-      background-color: #fefefe;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
       margin: 5% auto;
       padding: 20px;
-      border: 1px solid #888;
+      border: 1px solid #444;
       width: 80%;
       max-width: 600px;
     }
@@ -81,13 +76,13 @@
 
     .close:hover,
     .close:focus {
-      color: black;
+      color: #fff;
       text-decoration: none;
       cursor: pointer;
     }
   </style>
 </head>
-<body>
+<body class="dark-mode">
 
 <nav class="menu-principal">
   <div class="menu-container">
@@ -98,12 +93,6 @@
       <a href="/">Home</a>
       <a href="#" onclick="openModal('about')">About</a>
       <a href="#" onclick="openModal('categories')">Categories</a>
-      <div class="config-menu">
-        <button id="config-btn">⋯</button>
-        <ul id="config-options" class="hidden">
-          <li><button onclick="toggleTheme()">Toggle Theme</button></li>
-        </ul>
-      </div>
     </div>
   </div>
 </nav>
@@ -116,9 +105,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-  <style>/* Estilos inline */</style>
 </head>
-
 
 <!-- Search field -->
 <div id="search-container">
@@ -186,38 +173,17 @@
   function openNewTab(section) {
     let url = '';
     if (section === 'about') {
-      url = '/about.html';  // Replace with the real link for "About"
+      url = '/about.html';
     } else if (section === 'categories/projects') {
-      url = '/categories/projects.html';  // Replace with the real link for the "Projects" category
+      url = '/categories/projects.html';
     } else if (section === 'categories/articles') {
-      url = '/categories/articles.html';  // Replace with the real link for the "Articles" category
+      url = '/categories/articles.html';
     }
 
-    // Open the URL in a new tab
     window.open(url, '_blank');
-    closeModal('about');  // Close the modal after opening
+    closeModal('about');
     closeModal('categories');
   }
-
-  // Toggle theme
-  function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  }
-
-  // Load saved theme
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
-    // Toggle settings menu
-    document.getElementById('config-btn').addEventListener('click', () => {
-      document.getElementById('config-options').classList.toggle('show');
-    });
-  });
 </script>
 
 </body>
